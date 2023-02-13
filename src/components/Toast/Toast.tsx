@@ -35,7 +35,7 @@ const Toast: FC<IProps> = ({
       draggable={draggable}
       pauseOnHover={pauseOnHover}
       transition={Slide}
-      toastClassName={param => contextClass[param?.type || 'default']}
+      toastClassName={(param) => contextClass[param?.type || 'default']}
     />
   );
 };

@@ -1,7 +1,6 @@
-import { createApi /*, fetchBaseQuery */ } from '@reduxjs/toolkit/query/react';
+import { createApi /* , fetchBaseQuery */ } from '@reduxjs/toolkit/query/react';
 
 import { kyBaseQuery } from 'config/ky';
-
 import { IPost } from 'interfaces/post';
 
 export const posts = createApi({
@@ -9,7 +8,7 @@ export const posts = createApi({
   tagTypes: ['Post'],
   baseQuery: kyBaseQuery({ baseUrl: 'posts' }),
   // baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001/' }),
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     getPosts: builder.query<IPost[], number>({
       query: (limit = 0) => ({
         url: `${limit > 0 && `?_limit=${limit}`}`,
@@ -18,14 +17,14 @@ export const posts = createApi({
       providesTags: ['Post'],
     }),
     getPost: builder.query<IPost, string | undefined>({
-      query: id => ({
+      query: (id) => ({
         url: `/${id}`,
         method: 'get',
       }),
       providesTags: ['Post'],
     }),
     deletePost: builder.mutation<void, string>({
-      query: id => ({
+      query: (id) => ({
         url: `/${id}`,
         method: 'delete',
       }),
@@ -42,7 +41,7 @@ export const posts = createApi({
       invalidatesTags: ['Post'],
     }),
     addPost: builder.mutation<void, IPost>({
-      query: post => ({
+      query: (post) => ({
         method: 'post',
         params: {
           json: post,

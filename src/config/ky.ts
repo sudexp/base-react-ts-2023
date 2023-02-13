@@ -1,4 +1,5 @@
 import ky from 'ky';
+
 import type { BaseQueryFn } from '@reduxjs/toolkit/query';
 
 interface IResponse {
@@ -28,7 +29,7 @@ export const secureApi = api.extend({
   },
   hooks: {
     beforeRequest: [
-      request => {
+      (request) => {
         request.headers.set('X-Requested-With', 'ky');
       },
     ],
@@ -78,8 +79,10 @@ export const addPost = async () => {
 
   try {
     const posts = await api.post('posts', { json: newPost }).json();
+    // eslint-disable-next-line no-console
     console.log(posts);
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.log(err /* .message */);
   }
 };

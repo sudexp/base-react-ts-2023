@@ -1,8 +1,9 @@
 import { Dispatch } from 'redux';
 
-import { loadRoot, loadRootError, loadRootSuccess } from './slice';
 import { delay } from 'utils/delay';
 import { data } from 'utils/mock/data';
+
+import { loadRoot, loadRootError, loadRootSuccess } from './slice';
 
 // Define a thunk that dispatches action creator
 export const initiateRoot = () => async (dispatch: Dispatch) => {

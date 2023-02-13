@@ -5,9 +5,10 @@ import { Box, Typography, Button } from '@mui/material';
 
 import { useGetPostQuery, useUpdatePostMutation } from 'services/posts';
 import Title from 'components/Typography/Title';
+import { IPost } from 'interfaces/post';
+
 import UpdatePostModal from './UpdatePostModal';
 
-import { IPost } from 'interfaces/post';
 
 const Post: FC = () => {
   const { id } = useParams();

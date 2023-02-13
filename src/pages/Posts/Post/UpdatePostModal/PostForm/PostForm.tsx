@@ -6,9 +6,10 @@ import { Button } from '@mui/material';
 import InputControlled from 'components/Form/InputControlled';
 import HiddenFieldControlled from 'components/Form/HiddenFieldControlled';
 import { isObjectEmpty } from 'utils/isObjectEmpty';
+import { IPost } from 'interfaces/post';
+
 import { schema } from './schema';
 
-import { IPost } from 'interfaces/post';
 
 interface IProps {
   data?: IPost;

@@ -2,9 +2,10 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
-import Root from './Root';
 import { store } from 'redux/store';
 import { delay } from 'utils/delay';
+
+import Root from './Root';
 
 describe('root', () => {
   test('loading text appears', async () => {

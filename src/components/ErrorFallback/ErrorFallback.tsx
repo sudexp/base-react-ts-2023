@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Box, Button, Typography } from '@mui/material';
-
 import { FallbackProps } from 'react-error-boundary';
 
 const ErrorFallback: FC<FallbackProps> = ({ error, resetErrorBoundary }: FallbackProps) => {

@@ -2,9 +2,10 @@ import { FC } from 'react';
 import { Box, Modal } from '@mui/material';
 
 import Title from 'components/Typography/Title';
+import { IPost } from 'interfaces/post';
+
 import PostForm from './PostForm';
 
-import { IPost } from 'interfaces/post';
 
 interface IProps {
   data?: IPost;

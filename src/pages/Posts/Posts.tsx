@@ -5,11 +5,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 import { useGetPostsQuery, useDeletePostMutation, useAddPostMutation } from 'services/posts';
 import SEO from 'components/SEO';
-
 import { IPost } from 'interfaces/post';
 
 const Test: FC = () => {
-  const { data = [], error, isLoading /*, refetch */ } = useGetPostsQuery(20);
+  const { data = [], error, isLoading /* , refetch */ } = useGetPostsQuery(20);
   const [deletePost] = useDeletePostMutation();
   const [addPost] = useAddPostMutation();
 

@@ -2,8 +2,9 @@ import { FC } from 'react';
 import { TextField } from '@mui/material';
 import { useFormContext, Controller, FieldError } from 'react-hook-form';
 
-import FormError from '../FormError';
 import { capitalizeFirstLetter } from 'utils/capitalizeFirstLetter';
+
+import FormError from '../FormError';
 
 interface IProps {
   name: string;

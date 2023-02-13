@@ -23,7 +23,7 @@ const Qwert: FC = () => {
         <Link component={RouterLink} to='/'>
           Back To Root
         </Link>
-        <ConfirmButton sx={{ m: 2 }} color='success' onClick={() => console.log('test')}>
+        <ConfirmButton sx={{ m: 2 }} color='success' onClick={() => alert('test')}>
           Confirm
         </ConfirmButton>
         <SpinnerButton loading={loading} variant='outlined' size='medium' color='warning' onClick={() => setLoading(true)}>

@@ -15,7 +15,7 @@ import styles from './Root.module.css';
 const Root: FC = () => {
   const { pathname } = useLocation();
   const dispatch = useAppDispatch();
-  const { loading, data } = useAppSelector(state => state.root);
+  const { loading, data } = useAppSelector((state) => state.root);
 
   useEffect(() => {
     if (data.length === 0) dispatch(initiateRoot());
@@ -66,7 +66,7 @@ const Root: FC = () => {
           Toast
         </Button>
         <Box sx={{ maxWidth: 350 }}>
-          <TextField fullWidth placeholder='Type "bomb" to test Error Boundary' value={text} onChange={e => setText(e.target.value)} />
+          <TextField fullWidth placeholder='Type "bomb" to test Error Boundary' value={text} onChange={(e) => setText(e.target.value)} />
           <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => setText('')} resetKeys={[text]}>
             <Bomb text={text} />
           </ErrorBoundary>

@@ -24,7 +24,7 @@ export const slice = createSlice({
   name: 'Root',
   initialState,
   reducers: {
-    loadRoot: state => {
+    loadRoot: (state) => {
       state.loading = true;
       state.error = null;
     },
