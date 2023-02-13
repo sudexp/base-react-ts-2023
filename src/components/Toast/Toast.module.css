@@ -1,0 +1,23 @@
+.error {
+  background-color: red;
+}
+
+.success {
+  background-color: green;
+}
+
+.info {
+  background-color: blue;
+}
+
+.warning {
+  background-color: yellow;
+}
+
+.dark {
+  background-color: brown;
+}
+
+.default {
+  background-color: grey;
+}
